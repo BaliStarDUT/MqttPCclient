@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>mqtt</title>
+</head>
+<body>
+    <fieldset style="width:400px;">
+    <legend>设定Mqtt发送参数</legend>
+    <!--form表单的action属性规定当提交表单时，向何处发送表单数据，method属性指明表单的提交方式，分为get和post，默认为get-->
+    <form action="/uecloud/uecloud/BillDetailController/doMqttform.vot" method="post">
+    <table border="1px">
+           <tr>
+                <td>Publictopic</td>
+                <td><input type="text" name="Publictopic" value="Topics"></td>
+            </tr>
+            <tr>
+                <td>Times</td>
+                <td><input type="text" name="Times" value="1"></td>
+            </tr>
+            <tr>
+                <td>Host</td>
+                <td><input type="text" name="Host" size="30" value="tcp://10.4.45.133:61613"></td>
+            </tr>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="Username" value="admin"></td>
+            </tr>
+             <tr>
+                <td>Password</td>
+                <td><input type="text" name="Password" value="password"></td>
+            </tr>
+            <tr>
+                <td>Message</td>
+                <td>
+                <table>
+               		 <tr>
+                		<td>
+                		Type:
+                		</td>
+                		<td>
+    <select name="Type" id="type">
+        <option value="C:N|M:A|" SELECTED>广告(C:N|M:A|)</option>
+        <option value="C:N|M:C" >账单(C:N|M:C)</option>
+    </select>
+                		</td>
+                	</tr>
+                	<tr>
+                		<td>
+                		Title:
+                		</td>
+                		<td>
+                		    <input type="text" name="Title" id="title" value="Advertisement" />
+                		</td>
+                	</tr>
+                	<tr>
+                		<td>
+                		Url:
+                		</td>
+                		<td>
+    		  				<input type="text" name="Url" id="url" value="http://" />
+                		</td>
+                	</tr>
+                	<tr>
+                		<td>
+                		PicUrl:
+                		</td>
+                		<td>
+    		  				<input type="text" name="PicUrl" id="picurl" value="http://" />
+                		</td>
+                	</tr>
+                </table>
+                Content:
+    		<textarea name="Message" cols="34" rows="5" id="content">C:N|M:A|Tile|context|url|pic Please enter message!</textarea>
+    			 </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="提交"></td>
+            </tr>
+        </table>
+</form>
+<!--表单结束-->
+</fieldset>
+</body>
+</html>
